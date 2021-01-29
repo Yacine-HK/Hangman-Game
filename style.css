@@ -1,0 +1,215 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  height: 70%;
+  border: 2px solid orangered;
+  padding: 10px 40px;
+}
+
+.container header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+header span {
+  color: orangered;
+}
+
+.container .game-info {
+  border: 1px solid #af5838;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-info .draw-box {
+  width: 50%;
+  height: 85%;
+  position: relative;
+  border-right: 1px solid #eee;
+}
+
+.draw-box .p1 {
+  width: 150px;
+  height: 4px;
+  bottom: 20px;
+  left: 30px;
+}
+
+.draw-box .p1,
+.draw-box .p1::after,
+.draw-box .p1::before,
+.draw-box .p2,
+.draw-box .gibbet,
+.draw-box .head,
+.draw-box .body,
+.draw-box .body::before,
+.draw-box .body::after,
+.draw-box .leg::before,
+.draw-box .leg::after,
+.draw-box .p3 {
+  position: absolute;
+  content: "";
+  border: 2px solid #111;
+}
+
+.draw-box .p1::after {
+  width: 120px;
+  height: 8px;
+  bottom: 190px;
+  left: 78px;
+}
+
+.draw-box .p1::before {
+  width: 8px;
+  height: 210px;
+  bottom: 0px;
+  left: 72px;
+}
+
+.draw-box .p2 {
+  width: 8px;
+  height: 54px;
+  bottom: 160px;
+  left: 222px;
+}
+
+.draw-box .p3 {
+  width: 8px;
+  height: 60px;
+  bottom: 159px;
+  left: 131px;
+  transform: rotate(45deg);
+}
+
+.draw-box .gibbet {
+  border-radius: 50%;
+  border: dashed;
+  width: 60px;
+  height: 60px;
+  bottom: 100px;
+  left: 195px;
+}
+.draw-box .head {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  bottom: 110px;
+  left: 205px;
+}
+
+.draw-box .body {
+  background: #111;
+  border: none;
+  width: 3px;
+  height: 40px;
+  bottom: 70px;
+  left: 223px;
+}
+.draw-box .body::before {
+  background: #111;
+  border: none;
+  width: 3px;
+  height: 30px;
+  bottom: 11px;
+  left: 13px;
+  transform: rotate(55deg);
+}
+.draw-box .body::after {
+  background: #111;
+  border: none;
+  width: 3px;
+  height: 30px;
+  bottom: 11px;
+  left: -13px;
+  transform: rotate(-55deg);
+}
+
+.draw-box .leg {
+  position: relative;
+}
+
+.draw-box .leg::after {
+  background: #111;
+  border: none;
+  width: 3px;
+  height: 27px;
+  bottom: -203px;
+  left: 233px;
+  transform: rotate(-55deg);
+}
+.draw-box .leg::before {
+  background: #111;
+  border: none;
+  width: 3px;
+  height: 30px;
+  bottom: -205px;
+  left: 211px;
+  transform: rotate(55deg);
+}
+
+.game-info .letters-box {
+  padding: 20px;
+  width: 50%;
+  min-height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem 13px;
+}
+
+.letters-box .letter-box {
+  width: 40px;
+  height: 40px;
+  background-color: orangered;
+  text-align: center;
+}
+
+.letters-box .letter-box span {
+  line-height: 40px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.container .word-letters {
+  margin-top: 1.5rem;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.word-letters .letter-box {
+  width: 30px;
+  height: 30px;
+  background-color: #ffae90;
+  text-align: center;
+  border-bottom: 3px solid orangered;
+}
+.word-letters .letter-box span {
+  line-height: 30px;
+  color: #111;
+  font-weight: bold;
+}
