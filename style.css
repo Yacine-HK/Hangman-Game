@@ -7,6 +7,8 @@
 }
 
 body {
+  width: 100%;
+  height: 100%;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 16px;
   display: flex;
@@ -69,6 +71,26 @@ header span {
   position: absolute;
   content: "";
   border: 2px solid #111;
+}
+
+.draw-box .gibbet,
+.draw-box .head,
+.draw-box .body,
+.draw-box .leg {
+  display: none;
+}
+
+.draw-box.wrong1 .gibbet {
+  display: block;
+}
+.draw-box.wrong2 .head {
+  display: block;
+}
+.draw-box.wrong3 .body {
+  display: block;
+}
+.draw-box.wrong4 .leg {
+  display: block;
 }
 
 .draw-box .p1::after {
@@ -181,15 +203,23 @@ header span {
   width: 40px;
   height: 40px;
   background-color: orangered;
+  cursor: pointer;
   text-align: center;
-}
-
-.letters-box .letter-box span {
   line-height: 40px;
   color: #fff;
-  cursor: pointer;
   text-transform: uppercase;
 }
+.letters-box .letter-box.select {
+  background-color: #ddd;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* .letters-box .letter-box span {
+  line-height: 40px;
+  color: #fff;
+  text-transform: uppercase;
+} */
 
 .container .word-letters {
   margin-top: 1.5rem;
@@ -201,15 +231,83 @@ header span {
   gap: 1rem;
 }
 
-.word-letters .letter-box {
+.word-letters .alphabet-box {
   width: 30px;
   height: 30px;
   background-color: #ffae90;
   text-align: center;
   border-bottom: 3px solid orangered;
 }
-.word-letters .letter-box span {
+.word-letters .alphabet-box span {
   line-height: 30px;
   color: #111;
   font-weight: bold;
+  text-transform: uppercase;
+}
+
+.game-end {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-end .lose,
+.game-end .win {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 90%;
+  height: 50%;
+  opacity: 0.98;
+}
+
+.game-end .lose {
+  background-color: #6d1818;
+}
+
+.lose p,
+.win p {
+  color: #fff;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.lose p:first-child,
+.win p:first-child {
+  letter-spacing: 8px;
+}
+
+.lose p span {
+  color: #ffa535;
+  text-transform: uppercase;
+  border-bottom: 2px solid;
+}
+
+.lose .try,
+.win .try {
+  max-height: 22px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-top: 1rem;
+}
+
+.lose .try:hover,
+.win .try:hover {
+  color: #ffa535;
+  border-bottom: 2px solid;
+}
+
+.game-end .win {
+  background-color: #006d29;
+}
+.win p span {
+  color: #ffa535;
 }
