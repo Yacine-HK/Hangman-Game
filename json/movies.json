@@ -1,0 +1,14 @@
+[
+  {
+    "category": "movies",
+    "title": "movie one"
+  },
+  {
+    "category": "movies",
+    "title": "movie two"
+  },
+  {
+    "category": "movies",
+    "title": "movie three"
+  }
+]

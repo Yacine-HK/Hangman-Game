@@ -228,6 +228,7 @@ header span {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -238,11 +239,18 @@ header span {
   text-align: center;
   border-bottom: 3px solid orangered;
 }
-.word-letters .alphabet-box span {
+
+.alphabet-box span {
   line-height: 30px;
   color: #111;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.alphabet-box.spacing {
+  width: 30px;
+  height: 4px;
+  background-color: orangered;
 }
 
 .game-end {
