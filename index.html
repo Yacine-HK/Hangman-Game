@@ -6,38 +6,39 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button data-category="json/math.json" class="btn">
-      Mathematics category
-    </button>
+    <div class="categories-container">
+      <button data-category="json/movies.json" class="btn">
+        Movies Category
+      </button>
+      <button data-category="json/movies.json" class="btn">
+        Movies Category
+      </button>
+      <button data-category="json/movies.json" class="btn">
+        Movies Category
+      </button>
+    </div>
+
     <div class="container">
-      <header>
-        <p>Hangman Game</p>
-        <p>Category: <span id="category"></span></p>
-      </header>
-      <div class="game-info">
-        <div class="draw-box">
-          <div class="p1"></div>
-          <div class="p2"></div>
-          <div class="p3"></div>
-          <div class="gibbet"></div>
-          <div class="head"></div>
-          <div class="body"></div>
-          <div class="leg"></div>
+      <div class="game-container">
+        <header>
+          <p>Hangman Game</p>
+          <div id="app"></div>
+          <p>Category: <span id="category"></span></p>
+        </header>
+        <div class="game-info">
+          <div class="draw-box">
+            <div class="p1"></div>
+            <div class="p2"></div>
+            <div class="p3"></div>
+            <div class="gibbet"></div>
+            <div class="head"></div>
+            <div class="body"></div>
+            <div class="leg"></div>
+          </div>
+          <div class="letters-box"></div>
         </div>
-        <div class="letters-box"></div>
-      </div>
-      <div class="word-letters"></div>
-      <div class="game-end">
-        <div class="win">
-          <p>Congratulation You Win :)</p>
-          <p>Your Wrong Answers Are : <span></span></p>
-          <p class="try">Try Again</p>
-        </div>
-        <div class="lose">
-          <p>You Lose This Time :(</p>
-          <p>The Word is <span></span></p>
-          <p class="try">Try Again</p>
-        </div>
+        <div class="word-letters"></div>
+        <div class="game-end"></div>
       </div>
     </div>
     <script src="app.js"></script>
