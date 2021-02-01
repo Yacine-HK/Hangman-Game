@@ -1,14 +1,42 @@
 [
   {
     "category": "movies",
-    "title": "movie one"
+    "title": "The Seven Samurai"
   },
   {
     "category": "movies",
-    "title": "movie two"
+    "title": "Bonnie and Clyde"
   },
   {
     "category": "movies",
-    "title": "movie three"
+    "title": "Reservoir Dogs"
+  },
+  {
+    "category": "movies",
+    "title": "Airplane"
+  },
+  {
+    "category": "movies",
+    "title": "Pan's Labyrinth"
+  },
+  {
+    "category": "movies",
+    "title": "The Godfather"
+  },
+  {
+    "category": "movies",
+    "title": "The Wizard of Oz"
+  },
+  {
+    "category": "movies",
+    "title": "Citizen Kane"
+  },
+  {
+    "category": "movies",
+    "title": "The Shawshank Redemption"
+  },
+  {
+    "category": "movies",
+    "title": "Pulp Fiction"
   }
 ]

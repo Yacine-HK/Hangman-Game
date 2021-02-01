@@ -49,7 +49,7 @@ categoryBtn.forEach(btn => {
         category.innerHTML = categories[randomKeyNum].category
 
         // Transform the randomValue to Array
-        const letters = randomValue.split("")
+        const letters = randomValue.toLowerCase().split("")
         console.log(categories[randomKeyNum].title)
 
         letters.forEach(l => {
@@ -107,7 +107,7 @@ categoryBtn.forEach(btn => {
 
             // Show Message ALert
             if (wrongAnswers === 5) {
-              gameEnded("You Lose This Time", false)
+              gameEnded("You Lose This Time", false, randomValue)
             }
 
             else if (correctAnswers === letters.length) {
@@ -127,7 +127,7 @@ categoryBtn.forEach(btn => {
 
 
 // Show The Alert Message
-export function gameEnded(message, type) {
+export function gameEnded(message, type, word) {
   // Dispaly The Alert
   content.style.display = "flex"
 
@@ -144,7 +144,7 @@ export function gameEnded(message, type) {
   else {
     content.innerHTML = `<div class="lose">
     <p>${message}:(</p>
-    <p>The Word is <span></span></p>
+    <p>The Word is <span>${word}</span></p>
     <p class="try">Try Again</p>
   </div>`
   }

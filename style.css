@@ -34,8 +34,8 @@ body {
   outline: none;
   border: none;
   padding: 10px 15px;
+  width: 165px;
   border-radius: 5px;
-  box-shadow: 1px 1px 1px #000, 1px 1px 1px #000;
   box-shadow: 1px 1.5px 1px 1px #9a3900;
   background-color: orangered;
   color: #fff;
