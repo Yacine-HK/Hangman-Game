@@ -19,7 +19,7 @@ const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m
 let wrongAnswers = 0
 // Corrcets Answers Counter
 let correctAnswers = 0
-
+let randomValue = null
 let timerInterval = null;
 
 categoryBtn.forEach(btn => {
@@ -45,7 +45,7 @@ categoryBtn.forEach(btn => {
 
         // Get Random Value From the object words
         const randomKeyNum = Math.floor(Math.random() * categories.length)
-        const randomValue = categories[randomKeyNum].title
+        randomValue = categories[randomKeyNum].title
         category.innerHTML = categories[randomKeyNum].category
 
         // Transform the randomValue to Array
@@ -107,7 +107,7 @@ categoryBtn.forEach(btn => {
 
             // Show Message ALert
             if (wrongAnswers === 5) {
-              gameEnded("You Lose This Time", false, randomValue)
+              gameEnded("You Lose This Time", false)
             }
 
             else if (correctAnswers === letters.length) {
@@ -127,7 +127,7 @@ categoryBtn.forEach(btn => {
 
 
 // Show The Alert Message
-export function gameEnded(message, type, word) {
+export function gameEnded(message, type) {
   // Dispaly The Alert
   content.style.display = "flex"
 
@@ -137,14 +137,14 @@ export function gameEnded(message, type, word) {
   if (type)
     content.innerHTML = `<div class="win">
     <p>${message}:)</p>
-    <p>Your Wrong Answers Are : <span></span></p>
+    <p>Your Wrong Answers Are : <span>${wrongAnswers}</span></p>
     <p class="try">Try Again</p>
   </div>`
 
   else {
     content.innerHTML = `<div class="lose">
     <p>${message}:(</p>
-    <p>The Word is <span>${word}</span></p>
+    <p>The Word is <span>${randomValue}</span></p>
     <p class="try">Try Again</p>
   </div>`
   }
